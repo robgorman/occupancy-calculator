@@ -78,7 +78,7 @@ const SignInForm = () => {
           <Input id="sqft" placeholder="Sq. Ft." {...squareFeet} />
           <Input id="parking" placeholder="Parking" {...numberParking} />
           <Input id="bedrooms" placeholder="Bedrooms" {...numberBedrooms} />
-          <Button id="compute" type="submit" >Compute Maximum Occupancy</Button>
+          <Button id="compute" type="submit" >Compute</Button>
        </Row>
        <Row>
          <Error> {errorMessage}</Error>
@@ -170,14 +170,14 @@ const SignInForm = () => {
 export default SignInForm;
 
 const Explanation = styled.div`
-  margin: 10px 0px 0px 70px;
+  margin: 5px 0px 0px 35px;
 `
 const Code = styled.text`
   font-family: Courier New;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 9px;
+  line-height: 11px;
   color: #ffffff;
   text-align: left;
   margin: 0px 0px;
@@ -188,15 +188,15 @@ const Text = styled.text`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 10px;
+  line-height: 11px;
   color: #ffffff;
   text-align: left;
 `;
 
 const Tab = styled.button`
-  font-size: 30px;
-  padding: 10px 60px;
+  font-size: 15px;
+  padding: 5px 30px;
   cursor: pointer;
   opacity: .5;
   background: #282c34;
@@ -216,14 +216,15 @@ const ButtonGroup = styled.div`
 `;
 
 const Label = styled.div`
-  width : 70px;
+  width : 50px;
   border-radius: 5px; 
   margin-top: 20px; 
-  margin-bottom: -14px;
+  margin-bottom: -7px;
+  font-size: 14px;
   color: #ffffff;
   background-blend-mode: overlay;
   vertical-align: bottom;
-  padding-right: 25px;
+  padding-right: 12px;
 `
 
 const MaximumOccupancy = styled.div`
@@ -233,8 +234,8 @@ const MaximumOccupancy = styled.div`
    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
    font-style: normal;
    font-weight: bold;
-   font-size: 40px;
-   line-height: 48px;
+   font-size: 20px;
+   line-height: 24px;
    color: #ffffff;
    text-align: center;
 `
@@ -263,16 +264,18 @@ const Title = styled.h1`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 20px;
+  line-height: 24px;
   color: #ffffff;
   text-align: center;
 `;
 
 const Input = styled.input`
-  width : 70px;
+  width : 60px;
   border-radius: 5px; 
-  margin-right: 20px;
+  margin-right: 10px;
+  height: 20px;
+
   background-blend-mode: overlay;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 20px 40px rgba(31, 47, 71, 0.25),
@@ -286,8 +289,9 @@ const Input = styled.input`
 
 const Button = styled.button`
   background: #6295cf;
-  padding: 12px 0;
-  width: 250px;
+
+  width: 100px;
+  height: 25px;
   border: none;
   border-radius: 30px;
   color: black;

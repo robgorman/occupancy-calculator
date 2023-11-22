@@ -40,21 +40,21 @@ const Byline = styled.h1`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: italic;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 48px;
+  font-size: 10px;
+  line-height: 24px;
   color: #ffffff;
   text-align: center;
 `;
 
 const Title = styled.h1`
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 20px;
+  line-height: 24px;
   color: #ffffff;
   text-align: center;
 `;
