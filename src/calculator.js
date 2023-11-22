@@ -77,7 +77,7 @@ const SignInForm = () => {
         <Row>
           <Input id="sqft" placeholder="Sq. Ft." {...squareFeet} />
           <Input id="parking" placeholder="Parking" {...numberParking} />
-          <Input id="bedrooms" placeholder="Bedrooms" {...numberBedrooms} />
+          <Input id="bedrooms" placeholder="Bedrms" {...numberBedrooms} />
           <Button id="compute" type="submit" >Compute</Button>
        </Row>
        <Row>
@@ -176,7 +176,7 @@ const Code = styled.text`
   font-family: Courier New;
   font-style: normal;
   font-weight: normal;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 11px;
   color: #ffffff;
   text-align: left;
@@ -188,10 +188,12 @@ const Text = styled.text`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 10px;
   color: #ffffff;
   text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
 `;
 
 const Tab = styled.button`
@@ -216,10 +218,10 @@ const ButtonGroup = styled.div`
 `;
 
 const Label = styled.div`
-  width : 50px;
+  width : 62px;
   border-radius: 5px; 
   margin-top: 20px; 
-  margin-bottom: -7px;
+  margin-bottom: -14px;
   font-size: 14px;
   color: #ffffff;
   background-blend-mode: overlay;
@@ -290,7 +292,7 @@ const Input = styled.input`
 const Button = styled.button`
   background: #6295cf;
 
-  width: 100px;
+  width: 80px;
   height: 25px;
   border: none;
   border-radius: 30px;
