@@ -11,6 +11,7 @@ export default function App() {
       <Image src={backgroundImage}></Image>
       <Title>Welcome to Rob's Official, Unofficial City Of Big Bear Lake Short Term Rental Maximum Occupancy Calculator.
       </Title>
+      <Byline>Brought to by rob@ranchosoftware.com</Byline>
     
       <Calculator />
     </Wrapper>
@@ -32,8 +33,22 @@ const Wrapper = styled.div`
   padding-bottom: 500px;
 `;
 
+const Byline = styled.h1`
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: center;
+`;
+
 const Title = styled.h1`
-  margin: 60px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
