@@ -11,7 +11,7 @@ export default function App() {
       <Image src={backgroundImage}></Image>
       <Title>Welcome to Rob's Official, Unofficial City Of Big Bear Lake Short Term Rental Maximum Occupancy Calculator.
       </Title>
-      <Byline>Brought to by rob@ranchosoftware.com</Byline>
+      <Byline>Brought to you by rob@ranchosoftware.com</Byline>
     
       <Calculator />
     </Wrapper>
