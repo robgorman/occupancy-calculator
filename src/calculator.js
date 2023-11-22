@@ -216,13 +216,14 @@ const ButtonGroup = styled.div`
 `;
 
 const Label = styled.div`
-width : 70px;
-border-radius: 5px; 
-
-color: #ffffff;
-background-blend-mode: overlay;
-vertical-align: bottom;
-padding-right: 25px;
+  width : 70px;
+  border-radius: 5px; 
+  margin-top: 20px; 
+  margin-bottom: -14px;
+  color: #ffffff;
+  background-blend-mode: overlay;
+  vertical-align: bottom;
+  padding-right: 25px;
 `
 
 const MaximumOccupancy = styled.div`
