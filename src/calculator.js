@@ -129,7 +129,7 @@ const SignInForm = () => {
         <p>
             <Text>The calculation starts with the square footage. But if your property has 
               more bedrooms than parking spaces you must adjust the square footage downward by 
-              the difference between the number of bedrooms and parking spaces. Call this the
+              the difference between the number of bedrooms and parking spaces times 200. Call this the
              "adjusted square footage". If your property has at least as many parking spaces
               as bedrooms then there is no adjustment and the "adjusted square footage" is 
               simply the actual square footage. 
