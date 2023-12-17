@@ -22,11 +22,11 @@ const Calculator = () => {
   const numberBedrooms = useInput("");
   
   const roundingModes = [
-    {label: "Round Up", value: true},
-    {label: "Simple Rounding", value: false}
+    {label: "Round Up", value: "up"},
+    {label: "Simple Rounding", value: "simple"}
   ]
 
-  const [roundUp, setRoundUp] = useState(true);
+  const [roundUp, setRoundUp] = useState("up");
 
   
   function onChangeRoundUp(event) {
@@ -74,7 +74,7 @@ const Calculator = () => {
         rawTotalOccupancy: rawTotalOccupancy, 
         totalOccupancy: totalOccupancy, 
         adultOccupancy: adultOccupancy, 
-        roundUp: roundUp === true ? "Up" : "Simple"}];
+        roundUp: roundUp === "up" ? "Up" : "Simple"}];
       newHist = newArray.concat(history);
       setHistory(newHist);
     }
