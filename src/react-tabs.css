@@ -4,7 +4,7 @@
 
 .react-tabs__tab-list {
   border-bottom: 1px solid #aaa;
-  margin: 0 0 40px;
+  margin: 0 0 0px;
   padding: 0;
   width: 100%;
   position: center;
@@ -15,7 +15,7 @@
   display: inline-block;
   border: 1px solid transparent;
   border-bottom: none;
-  bottom: -1px;
+  bottom: 0px;
   position: center;
   list-style: none;
   padding: 6px 12px;
@@ -43,9 +43,6 @@
   content: '';
   position: absolute;
   height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
   background: #fff;
 }
 

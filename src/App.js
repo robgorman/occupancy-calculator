@@ -8,7 +8,7 @@ import Calculator from "./components/calculator";
 import Explanation from "./components/explanation";
 
 const Wrapper = styled.div`
-  padding-top: 10px;
+  padding-top: 0px;
   margin: 0 auto;
   background-color: #282c34;
   align-items: center;
@@ -20,8 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const Byline = styled.h1`
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: italic;
@@ -53,6 +52,9 @@ const BigBearIcon = styled.img`
   margin-right: auto;
   width: 40%;
 `;
+
+
+
 export default function App() {
   return (
     <Wrapper>
