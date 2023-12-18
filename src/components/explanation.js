@@ -67,7 +67,7 @@ const Explanation = () => {
                         spaces.
                 </Paragraph>
                 <Paragraph>
-                    The calculation starts with the square footage. But if your property has
+                    The total occupancy calculation starts with the square footage. But if your property has
                         more bedrooms than parking spaces you must adjust the square footage downward by
                         the difference between the number of bedrooms and parking spaces times 200. Call this the
                         "adjusted square footage". If your property has at least as many parking spaces
@@ -80,7 +80,10 @@ const Explanation = () => {
                         Sometimes they seem to round up and other times to simply round.
                 </Paragraph>
                 <Paragraph>
-                    Some aspects of this formula make sense as to the goals of the city. They want to
+                    The adult occupancy is the minimum of the total occupancy or the number of bedrooms times 2 plus 2.
+                </Paragraph>
+                <Paragraph>
+                    Some aspects of these formulas make sense as to the goals of the city. They want to
                         both limit occupancy and minimize the number of cars driving up the mountain. However, there is significant flaw to
                         the formula. Consider a property with 1500 square feet, 2 parking spaces and 4 bedrooms. The
                         max occupancy is 6.  Now consider a similar property with the same numbers except 3 bedrooms. The max
