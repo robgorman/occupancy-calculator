@@ -42,7 +42,6 @@ const History = ({ history }) => {
                                     <th>Raw O.</th>
                                     <th>Max O.</th>
                                     <th>Adult O.</th>
-                             
                                     <th>Round</th>
                                 </tr>
                             </thead>

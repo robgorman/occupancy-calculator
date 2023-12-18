@@ -23,14 +23,16 @@ const Calculator = () => {
   
   const roundingModes = [
     {label: "Round Up", value: "up"},
-    {label: "Simple Rounding", value: "simple"}
+    {label: "Simple Rounding", value: "simple"},
+    {label: "Truncate", value: "truncate"},
+
   ]
 
-  const [roundUp, setRoundUp] = useState("up");
+  const [roundingMode, setRoundingMode] = useState("up");
 
   
-  function onChangeRoundUp(event) {
-    setRoundUp(event.target.value);
+  function onChangeRoundingMode(event) {
+    setRoundingMode(event.target.value);
   }
 
 
@@ -62,11 +64,30 @@ const Calculator = () => {
       }
 
       let rawTotalOccupancy = adjustedSqft / 200;
-      let totalOccupancy = roundUp ? Math.min(16, Math.ceil(rawTotalOccupancy)) : Math.min(16, Math.round(rawTotalOccupancy));
+      var totalOccupancy = 0; 
+      if (roundingMode === "up") {
+        totalOccupancy = Math.min(16, Math.ceil(rawTotalOccupancy));
+      } else if (roundingMode === "simple") {
+        totalOccupancy =  Math.min(16, Math.round(rawTotalOccupancy));
+      } else if (roundingMode === "truncate") {
+        totalOccupancy =  Math.min(16, Math.trunc(rawTotalOccupancy));
+      }
+
+    
       setTotalOccupancy(totalOccupancy);
       let adultOccupancy = Math.min(totalOccupancy, (beds * 2) + 2);
       setAdultOccupancy(adultOccupancy);
       var newHist = history;
+      var roundMode = "";
+      if (roundingMode === "up") {
+        roundMode = "Up";
+      } else if (roundingMode === "simple") {
+        roundMode = "Simple";
+      } else if (roundingMode === "truncate") {
+        roundMode = "Truncate";
+      }
+      setRoundingMode(roundMode);
+
       var newArray = [{ 
         squareFootage: sqft, 
         bedrooms: beds, 
@@ -74,7 +95,7 @@ const Calculator = () => {
         rawTotalOccupancy: rawTotalOccupancy, 
         totalOccupancy: totalOccupancy, 
         adultOccupancy: adultOccupancy, 
-        roundUp: roundUp === "up" ? "Up" : "Simple"}];
+        roundingMode: roundMode}];
       newHist = newArray.concat(history);
       setHistory(newHist);
     }
@@ -86,7 +107,7 @@ const Calculator = () => {
       <FormWrapper onSubmit={submitForm}>
         <Row>
           <DroplistLabel>Rounding Mode:</DroplistLabel>
-          <Select onChange={onChangeRoundUp}>
+          <Select onChange={onChangeRoundingMode}>
             {roundingModes.map((mode) => (
               <option key={mode.value} value={mode.value}>
                 {mode.label}

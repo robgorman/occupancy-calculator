@@ -21,7 +21,7 @@ const HistoryItem = ({ item }) => {
                 <td>{item.rawTotalOccupancy}</td>
                 <td>{item.totalOccupancy}</td>
                 <td>{item.adultOccupancy}</td>
-                <td>{item.roundUp}</td>
+                <td>{item.roundingMode}</td>
             </TR>
         </>
     );

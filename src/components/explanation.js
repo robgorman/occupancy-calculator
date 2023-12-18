@@ -39,8 +39,9 @@ const Explanation = () => {
                         that I have applied it to. There is some discrepency that I believe is due to the underlying rounding
                         rules. Some examples the city has provided me work only if occupancy is rounded up in the calculation.
                         And some examples work only if occupancy is rounded (ie .49 and lower goes to 0 and .5
-                        and higher goes to 1 ). I believe that the city does not always apply the rounding rules
-                        consistently. So my calculator comes in two flavors. One rounds up and one simply rounds. 
+                        and higher goes to 1 ). Also some property owners on Facebook have reported that the city does not 
+                        round at all, but rather truncates in their cases. I believe that the city does not always apply the rules
+                        consistently. So my calculator comes in three flavors. One rounds up and one simply rounds and one truncates. 
                         Written in psuedo-Excel spreadsheet language, the formulas are:
                     
                 </Paragraph>
@@ -53,6 +54,12 @@ const Explanation = () => {
                 <Paragraph>Simple Rounding Formula:
                     <Code>
                     Total Occupancy (TO) =MIN(16,ROUND((sqft - IF(parking &lt; bdrms, 200*(bdrms-parking), parking))/200, 0))<br></br>
+                    Adult Occupancy (AO) =MIN(TO, (bdrms * 2) + 2)
+                    </Code>
+                </Paragraph>
+                <Paragraph>Truncation Formula:
+                    <Code>
+                    Total Occupancy (TO) =MIN(16,TRUNC((sqft - IF(parking &lt; bdrms, 200*(bdrms-parking), parking))/200, 0))<br></br>
                     Adult Occupancy (AO) =MIN(TO, (bdrms * 2) + 2)
                     </Code>
                 </Paragraph>
@@ -76,8 +83,9 @@ const Explanation = () => {
                 </Paragraph>
                 <Paragraph>
                     Once you know the adjusted square footage, the maximum occupancy
-                        is calculated by dividing adjusted square footage by 200, then rounding. I think the city is not consistent in which rounding rule they use. 
-                        Sometimes they seem to round up and other times to simply round.
+                        is calculated by dividing adjusted square footage by 200, then rounding (or truncating). I think the city is not consistent 
+                        in which rule they use. 
+                        Rounding Up, Simple Rounding and Truncation all seem to be in use.
                 </Paragraph>
                 <Paragraph>
                     The adult occupancy is the minimum of the total occupancy or the number of bedrooms times 2 plus 2.
