@@ -36,7 +36,7 @@ const Explanation = () => {
                             Although I sent my derived formula to the city,
                         I never received a acknowledgment that it is indeed the correct calculation.
                         Nevertheless, it mostly fits all examples and actual rentals
-                        that I have applied it to. There is some discrepency that I believe is due to the underlying Rounding
+                        that I have applied it to. There is some discrepency that I believe is due to the underlying rounding
                         rules. Some examples the city has provided me work only if occupancy is rounded up in the calculation.
                         And some examples work only if occupancy is rounded (ie .49 and lower goes to 0 and .5
                         and higher goes to 1 ). I believe that the city does not always apply the rounding rules
