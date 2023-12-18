@@ -120,7 +120,9 @@ export default Explanation;
 
 
 const ExplanationWrapper = styled.div`
-  margin: 5px 0px 0px 35px;
+  margin-top: 5px; 
+  margin-left: 15px;
+  margin-right: 15px;
 `
 const Code = styled.p`
   font-family: Courier New;
@@ -141,10 +143,9 @@ Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
-  text-align: justify;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 14px;
-  margin-right:30px
 `;
 const Text = styled.text`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
