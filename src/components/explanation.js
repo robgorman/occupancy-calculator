@@ -40,7 +40,7 @@ const Explanation = () => {
                         rules. Some examples the city has provided me work only if occupancy is rounded up in the calculation.
                         And some examples work only if occupancy is rounded (ie .49 and lower goes to 0 and .5
                         and higher goes to 1 ). I believe that the city does not always apply the rounding rules
-                        consistently. So my calculator comes in two flavors. On rounds up and one simply rounds. 
+                        consistently. So my calculator comes in two flavors. One rounds up and one simply rounds. 
                         Written in psuedo-Excel spreadsheet language, the formulas are:
                     
                 </Paragraph>
