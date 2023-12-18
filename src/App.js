@@ -59,7 +59,7 @@ export default function App() {
   return (
     <Wrapper>
       <BigBearIcon src={backgroundImage} alt="City of Big Bear Lake Seal"></BigBearIcon>
-      <Title>Welcome to Rob's Official, Unofficial City Of Big Bear Lake Short Term Rental Maximum Occupancy Calculator.</Title>
+      <Title>Welcome to Rob's Official, Unofficial City Of Big Bear Lake Short Term Rental Occupancy Calculator.</Title>
       <Byline>Brought to you by rob@ranchosoftware.com</Byline>
 
       <Tabs>

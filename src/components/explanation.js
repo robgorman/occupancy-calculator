@@ -17,11 +17,11 @@ const Explanation = () => {
             <ExplanationWrapper>
                 <Paragraph>
                    As a short term rental investor, knowing the maximum number of guests you
-                        allow in your property is an important economic consideration. All things
+                        allow in your property is an important economic consideration. All other things
                         being equal, the more guests your property can host, the more you can charge.
                 </Paragraph>
                 <Paragraph>
-                    The city of Big Bear Lake local ordinances prescribe the maximum occupancy
+                    The city of Big Bear Lake local ordinances prescribe the allowed occupancy
                         of all short term rentals located within the city limits. But the ordinance
                         wording is not very clear and there are a number of edge cases and subtleties
                         that are not well documented. But surely there is a formula somewhere for
