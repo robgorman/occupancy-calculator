@@ -22,13 +22,13 @@ const Calculator = () => {
   const numberBedrooms = useInput("");
   
   const roundingModes = [
-    {label: "Round Up", value: "up"},
-    {label: "Simple Rounding", value: "simple"},
-    {label: "Truncate", value: "truncate"},
+    {label: "Up", value: "Up"},
+    {label: "Simple", value: "Simple"},
+    {label: "Trunc", value: "Trunc"},
 
   ]
 
-  const [roundingMode, setRoundingMode] = useState("up");
+  const [roundingMode, setRoundingMode] = useState("Up");
 
   
   function onChangeRoundingMode(event) {
@@ -65,11 +65,11 @@ const Calculator = () => {
 
       let rawTotalOccupancy = adjustedSqft / 200;
       var totalOccupancy = 0; 
-      if (roundingMode === "up") {
+      if (roundingMode === "Up") {
         totalOccupancy = Math.min(16, Math.ceil(rawTotalOccupancy));
-      } else if (roundingMode === "simple") {
+      } else if (roundingMode === "Simple") {
         totalOccupancy =  Math.min(16, Math.round(rawTotalOccupancy));
-      } else if (roundingMode === "truncate") {
+      } else if (roundingMode === "Trunc") {
         totalOccupancy =  Math.min(16, Math.trunc(rawTotalOccupancy));
       }
 
@@ -78,7 +78,7 @@ const Calculator = () => {
       let adultOccupancy = Math.min(totalOccupancy, (beds * 2) + 2);
       setAdultOccupancy(adultOccupancy);
       var newHist = history;
-      var roundMode = "";
+     /*  var roundMode = "";
       if (roundingMode === "up") {
         roundMode = "Up";
       } else if (roundingMode === "simple") {
@@ -86,8 +86,10 @@ const Calculator = () => {
       } else if (roundingMode === "truncate") {
         roundMode = "Truncate";
       }
-      setRoundingMode(roundMode);
-
+      if (roundMode != ""){
+         setRoundingMode(roundMode);
+      }
+ */
       var newArray = [{ 
         squareFootage: sqft, 
         bedrooms: beds, 
@@ -95,7 +97,7 @@ const Calculator = () => {
         rawTotalOccupancy: rawTotalOccupancy, 
         totalOccupancy: totalOccupancy, 
         adultOccupancy: adultOccupancy, 
-        roundingMode: roundMode}];
+        roundingMode: roundingMode}];
       newHist = newArray.concat(history);
       setHistory(newHist);
     }
